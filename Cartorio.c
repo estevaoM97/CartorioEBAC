@@ -1,5 +1,5 @@
-#include <stdio.h> //bibliotÈca de comunicaÁ„o
-#include <stdlib.h> //alocaÁ„o de memoria
+#include <stdio.h> //bibliot√©ca de comunica√ß√£o
+#include <stdlib.h> //aloca√ß√£o de memoria
 #include <locale.h> //alocao de texto por regiao
 #include <string.h> //resposavel pelas strings
 
@@ -72,16 +72,16 @@ int consulta()
 	file = fopen(cpf,"r");
 	
 	if(file == NULL)
-	{
-		printf("Arquivo n„o localizado!.\n");
-	}
+{
+	printf("Arquivo n√£o localizado!.\n");
+}
 	
 	while(fgets(conteudo, 200, file) != NULL)
 	{
-		printf("\nEssas s„o as informaÁıes do usu·rio: ");
-		printf("%s", conteudo);
-		printf("\n\n");
-	}
+	printf("\nEssas s√£o as informa√ß√µes do usu√°rio: ");
+	printf("%s", conteudo);
+	printf("\n\n");
+}
 	
 	system("pause");
 }
@@ -100,7 +100,7 @@ int deletar()
 	
 	if(file == NULL)
 	{
-		printf("CPF n„o encontrado.\n");
+		printf("CPF n√£o encontrado.\n");
 		system("pause");
 	}
 	
@@ -121,46 +121,46 @@ int main()
 	for(laco=1;laco=1;)
     {
 	 
-	    system("cls");
+	system("cls");
 	 	 
         setlocale(LC_ALL,"portuguese"); //definindo linguagem
  
         printf("### Programinha Show EBAC ###\n\n"); //inicio do menu
-        printf("escolha a opÁ„o desejada no menu:\n\n");
+        printf("escolha a op√ß√£o desejada no menu:\n\n");
         printf("\t1 - Registrar nomes\n");
         printf("\t2 - consultar nomes\n");
         printf("\t3 - deletar nomes\n");
         printf("\t4 - Sair do sistema\n\n");
-	    printf("OpÁ„o: "); //fim do menu
+	printf("Op√ß√£o: "); //fim do menu
 
         scanf("%d",&opcao); //armazenando a escolha do usuario
     
         system("cls");
         
         switch(opcao)
-        {
-        	case 1:
-        	registro();
-	        break;
+{
+        case 1:
+        registro();
+	break;
 	        
-	        case 2:
-	        consulta();
-		    break;
+	case 2:
+	consulta();
+	break;
 		    
-		    case 3:
-		    deletar();
-		    break;
+	case 3:
+	deletar();
+	break;
 		    
-		    case 4:
-		    printf("AtÈ a proxima!\n");
-		    return 0;
-		    break;
+	case 4:
+	printf("At√© a proxima!\n");
+	return 0;
+	break;
 		    
-		    default:
-		    printf("essa opÁ„o nao exsite\n");
-		    system("pause");
-		    break;
-		}
+	default:
+	printf("essa op√ß√£o nao exsite\n");
+	system("pause");
+	break;
+}
     
 }
 }
